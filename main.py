@@ -13,15 +13,14 @@ class mylayout(GridLayout):
 		s = self.ids.egg.text
 		if s:
 			if s.find("+") or s.find("-") or s.find("/") or s.find("*") or s.find("1") or s.find("2") or s.find("3") or s.find("4") or s.find("5") or s.find("6") or s.find("7") or s.find("8") or s.find("9") or s.find("0"):
-				#self.ids.egg.text = str(eval(s))
 				try:
 					self.ids.egg.text = str(eval(s))
 				except SyntaxError:
-					self.ids.egg.text = 'Error!'
+					self.ids.egg.text = 'Error! Press Clear!' 
 			else:
 				self.ids.egg.text = 'NO!'		
 		else:
-			self.ids.egg.text = 'Empty!'
+			self.ids.egg.text = 'Empty! Press Clear!'	
 
 class calculatorApp(App):
 	def build(self):

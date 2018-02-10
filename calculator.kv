@@ -129,18 +129,9 @@
 			valign: 'middle'
 			text_size: self.width, None
 			font_size: self.height * 0.5
-		Button: 
-			text: 'Clear'
-			on_press: egg.text = ""
-			background_color: (1.0, 0.0, 0.0, 1.0)
-			halign: 'center'
-			valign: 'middle'
-			text_size: self.width, None
-			font_size: self.height * 0.35
-
 	BoxLayout:
 		spacing: 10
-		padding: 5
+		padding: 5		
 		Button: 
 			#text: 'Backspace'
 			on_press: root.backspace()
@@ -155,6 +146,15 @@
 				width: self.parent.width/10
 				center: self.parent.center
 				source: 'backspace.png'
+		Button: 
+			text: 'Clear'
+			on_press: egg.text = ""
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			halign: 'center'
+			valign: 'middle'
+			text_size: self.width, None
+			font_size: self.height * 0.35
+
 
 	BoxLayout:
 		spacing: 10
